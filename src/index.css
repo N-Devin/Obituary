@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.navbar {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px grey;
+
+  padding: 20 px;
+}
+
+.Title {
+  font-family: "Roboto", sans-serif;
+  color: rgb(61, 61, 61);
+  font-size: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.NewObituary {
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: flex-end;
+  padding: 10px;
+  transition: all 1s ease-out;
+}
+
+.NewObituary:hover {
+  color: #f5f5f5;
+  background-color: #545454;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  width: 50%;
+  max-width: 800px;
+  height: 50%;
+  max-height: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.window img {
+  width: 100%;
+  max-height: 300px; /* adjust as needed */
+  object-fit: contain; /* preserve aspect ratio */
+  margin-bottom: 20px; /* add some spacing below the image */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #434343;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Obituary-Body {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 20px;
+  color: rgb(163, 163, 163);
+  align-content: center;
+  padding: 30px;
+}
+.Obituary-Body h1 {
+  text-align: center;
+  font-weight: 1000;
+}
+.upload-dead_pic,
+.upload-Button {
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: none;
+  color: #545454;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease-out;
+}
+
+.upload-Button {
+  border: #c3c3c3 solid 1px;
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+.upload-Image:hover,
+.upload-Button:hover {
+  background-color: #545454;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="date"] {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #545454;
+  background-color: #f5f5f5;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="date"]::placeholder {
+  color: #a3a3a3;
+  opacity: 0.5;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 3px #545454;
+}
+
+.date {
+  font-family: "Roboto", sans-serif;
+  color: rgb(61, 61, 61);
+  font-size: 15px;
+  justify-content: center;
+  padding: 0px;
+}
+.card-pic-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card-image {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    justify-content: center;
+  }
+}
+
+.card {
+  flex-basis: calc(10% - 5px);
+  border: solid 2px grey;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px;
+  color: #545454;
+  text-align: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  color: #545454;
+  align-items: center;
+}
+
+.card-description {
+  font-size: 10px;
+  font-weight: 200;
+  color: #2e2e2e;
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+.card-text {
+  margin: 0px;
+  text-align: center;
+  padding: 0px;
+  width: 90%;
+}
+
+.card-hide {
+  display: none;
+  transition: all 0.3s ease-out;
+}
+
+.card:hover .card-hide {
+  display: block;
+  transition: all 0.3s ease-out;
+}
+
+.card-hide button {
+  display: block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #383838;
+  border-radius: 50px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto;
+}
+
+.card-hide button:hover {
+  background-color: #bbbbbb;
+  color: #383838;
+}
